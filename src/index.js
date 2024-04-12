@@ -33,7 +33,7 @@ const per_page = 8;
 const pageNumbers = [];
 
 const getData = async () => {
-  const response = await fetch('../info.json');
+  const response = await fetch('../src/info.json');
   const data = await response.json();
 
   return data;
