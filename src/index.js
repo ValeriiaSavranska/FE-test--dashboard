@@ -7,7 +7,6 @@ const aside = document.querySelector('.aside');
 let isAsideShow = false;
 const mobBtnHandelClick = () => {
   const svgBtn = document.querySelector('.mob-btn use');
-  console.log(svgBtn);
   isAsideShow = !isAsideShow;
   aside.classList.toggle('aside--hidden');
   if (isAsideShow) {
@@ -33,7 +32,7 @@ const per_page = 8;
 const pageNumbers = [];
 
 const getData = async () => {
-  const response = await fetch('./../src/info.json');
+  const response = await fetch('https://661923cc9a41b1b3dfbefe08.mockapi.io/info/clients');
   const data = await response.json();
 
   return data;
@@ -47,13 +46,11 @@ const paginate = event => {
   if (event.target.classList.contains('pagination__item--arrow-left')) {
     if (page < 1) return;
     page -= 1;
-    console.log('arrow-left', page);
   } else if (event.target.classList.contains('pagination__item--arrow-right')) {
     if (page >= pageNumbers.length - 1) return;
     page += 1;
   } else {
     page = Number(event.target.textContent) - 1;
-    console.log('page', page);
   }
 
   if (pageNumbers.length - 1 > 6) {
@@ -137,7 +134,6 @@ const paginate = event => {
 
   const paginationItems = document.querySelectorAll('.pagination__item');
   for (item of paginationItems) {
-    console.log(item.textContent === String(page + 1));
     if (item.textContent !== event.target.textContent) {
       item.classList.remove('pagination__item--active');
     }
