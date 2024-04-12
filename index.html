@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/index.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <button class="mob-btn" type="button">
+        <svg width="30" height="30">
+          <use href="./src/images/symbol-defs.svg#icon-menu"></use>
+        </svg>
+      </button>
+      <aside class="aside aside--hidden">
+        <div>
+          <div class="logo">
+            <svg width="37" height="37">
+              <use href="./src/images/symbol-defs.svg#icon-logo"></use>
+            </svg>
+            <h1 class="logo__title">Dashboard</h1>
+            <span class="logo__ver">v.01</span>
+          </div>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="">
+                  <svg class="nav__icon nav__icon--stroke" width="24" height="24">
+                    <use href="./src/images/symbol-defs.svg#icon-key-square"></use>
+                  </svg>
+                  <span class="nav__text">Dashboard</span>
+                  <!-- <svg width="16" height="16">
+                    <use href="./src/images/symbol-defs.svg#icon-chevron-right"></use>
+                  </svg> -->
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="">
+                  <svg class="nav__icon" width="24" height="24">
+                    <use href="./src/images/symbol-defs.svg#icon-d-square"></use>
+                  </svg>
+                  <span class="nav__text">Product</span>
+                  <svg class="nav__arrow" width="16" height="16">
+                    <use href="./src/images/symbol-defs.svg#icon-chevron-right"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="nav__item nav__item--active">
+                <a class="nav__link" href="">
+                  <svg class="nav__icon nav__icon--stroke" width="24" height="24">
+                    <use href="./src/images/symbol-defs.svg#icon-user-square"></use>
+                  </svg>
+                  <span class="nav__text">Customers</span>
+                  <svg class="nav__arrow" width="16" height="16">
+                    <use href="./src/images/symbol-defs.svg#icon-chevron-right"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="">
+                  <svg class="nav__icon nav__icon--stroke" width="24" height="24">
+                    <use href="./src/images/symbol-defs.svg#icon-wallet-money"></use>
+                  </svg>
+                  <span class="nav__text">Income</span>
+                  <svg class="nav__arrow" width="16" height="16">
+                    <use href="./src/images/symbol-defs.svg#icon-chevron-right"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="">
+                  <svg class="nav__icon" width="24" height="24">
+                    <use href="./src/images/symbol-defs.svg#icon-discount-shape"></use>
+                  </svg>
+                  <span class="nav__text">Promote</span>
+                  <svg class="nav__arrow" width="16" height="16">
+                    <use href="./src/images/symbol-defs.svg#icon-chevron-right"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="">
+                  <svg class="nav__icon" width="24" height="24">
+                    <use href="./src/images/symbol-defs.svg#icon-message-question"></use>
+                  </svg>
+                  <span class="nav__text">Help</span>
+                  <svg class="nav__arrow" width="16" height="16">
+                    <use href="./src/images/symbol-defs.svg#icon-chevron-right"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="user-info">
+          <img class="user-info__img" src="./src/images/foto.png" alt="" />
+          <div class="user-info__wrap">
+            <p class="user-info__name">Evano</p>
+            <p class="user-info__position">Project Manager</p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="content">
+        <p class="content__greeting">Hello Evano 👋🏼,</p>
+        <div class="content__box">
+          <div class="content__header header">
+            <div class="header__title-wrap">
+              <h2 class="header__title">All Customers</h2>
+              <p class="header__status">Active Members</p>
+            </div>
+            <form class="header__form form">
+              <button type="button" class="form__btn">
+                <svg width="24" height="24">
+                  <use href="./src/images/symbol-defs.svg#icon-search"></use>
+                </svg>
+              </button>
+              <input class="form__input" type="text" placeholder="Search" />
+            </form>
+          </div>
+
+          <div class="content__table-wrap">
+            <table class="table">
+              <thead class="table__header">
+                <tr class="table__row table__row--header">
+                  <th class="table__data table__data--header">Customer Name</th>
+                  <th class="table__data table__data--header">Company</th>
+                  <th class="table__data table__data--header">Phone Number</th>
+                  <th class="table__data table__data--header">Email</th>
+                  <th class="table__data table__data--header">Country</th>
+                  <th class="table__data table__data--header">Status</th>
+                </tr>
+              </thead>
+              <tbody class="table__body">
+                <!-- <tr class="table__row table__row--body">
+                  <td class="table__data table__data--body" data-label="Customer Name">
+                    Jane Cooper
+                  </td>
+                  <td class="table__data table__data--body" data-label="Company">Microsoft</td>
+                  <td class="table__data table__data--body" data-label="Phone Number">
+                    (225) 555-0118
+                  </td>
+                  <td class="table__data table__data--body" data-label="Email">
+                    jane@microsoft.com
+                  </td>
+                  <td class="table__data table__data--body" data-label="Country">United States</td>
+                  <td
+                    class="table__data table__data--body table__status table__status--active"
+                    data-label="Status"
+                  >
+                    Active
+                  </td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="content__footer footer">
+            <p class="footer__info">
+              Showing data <span>1</span> to <span>8</span> of <span>256K</span> entries
+            </p>
+            <ul class="footer__pagination pagination">
+              <!-- <li class="pagination__item">&#60;</li>
+              <li class="pagination__item pagination__item--active">1</li>
+              <li class="pagination__item">2</li>
+              <li class="pagination__item">3</li>
+              <li class="pagination__item">4</li>
+              <li class="pagination__item pagination__item--dots">...</li>
+              <li class="pagination__item">40</li>
+              <li class="pagination__item">&#62;</li> -->
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./src/index.js"></script>
+  </body>
+</html>
